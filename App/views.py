@@ -55,7 +55,7 @@ class DashboardView(ModelViewSet):
         start_time = time.time()
 
         cache_key = (
-            f"dashboard:v1:{request.user.uuid}"
+            f"dashboard:v2:{request.user.uuid}"
         )
 
         dashboard_data = cache.get(cache_key)
